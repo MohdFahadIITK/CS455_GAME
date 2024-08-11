@@ -5,7 +5,7 @@ export default function TryAgainButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/play');
+    navigate('/CS455/play');
   };
 
   return<button onClick={handleClick} className='flex h-fit w-fit text-3xl bg-red-500 px-4 py-4 rounded-md'>

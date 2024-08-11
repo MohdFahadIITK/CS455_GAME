@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/CS455_GAME/' element={<LandingPage />} />
+        <Route path='/CS455_GAME/' element={<LandingPage/>} />
         <Route path='/CS455_GAME/L/' element={<EndingPageLoss/>}/>
         <Route path='/CS455_GAME/W/' element={<EndingPageWin/>}/>
       </Routes>
