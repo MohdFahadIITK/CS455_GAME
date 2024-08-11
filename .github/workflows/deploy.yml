@@ -3,7 +3,7 @@ name: Deploy Vite Project
 on:
   push:
     branches:
-      - main  # Change this to the branch you want to deploy from
+      - main  # Ensure this matches your branch name
 
 jobs:
   deploy:
@@ -24,7 +24,13 @@ jobs:
     - name: Build project
       run: npm run build
 
+    - name: Configure Git
+      run: |
+        git config --global user.email "mayankpushpjeet2020@gmail.com"
+        git config --global user.name "Mayank_Pushpjeet"
+
     - name: Deploy to GitHub Pages
-      run: npm run deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
