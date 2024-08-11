@@ -1,9 +1,9 @@
 import React from 'react';
 import TryAgainButton from './TryAgainButton';
-import EndPageContent_Loss from './EndPageContent_Loss';
+import EndPageContentLoss from './EndPageContentLoss';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';
 
-export default function LandingPage() {
+export default function EndingPageLoss() {
   return (
     <div
       style={{
@@ -17,7 +17,7 @@ export default function LandingPage() {
         alignItems: 'center',
       }}
     >
-      <EndPageContent_Loss />
+      <EndPageContentLoss />
       <TryAgainButton />
     </div>
   );
