@@ -2,12 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hand Cricket</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="text/javascript">
+      (function() {
+        var path = window.location.search.substr(1);
+        if (path) {
+          // Adjusting the path to work correctly with the basename
+          window.history.replaceState({}, '', '/CS455_GAME/' + path);
+        }
+      })();
+    </script>
+    <script type="module" src="%PUBLIC_URL%/src/main.jsx"></script>
   </body>
 </html>
