@@ -9,6 +9,10 @@ function App() {
   
   return (
     <>
+      <nav>
+        <Link to = "/CS455_GAME/">Landing</Link>
+        <Link to = "/CS455_GAME/L">Ending</Link>
+      </nav>
       <Outlet/>
     </>
   );
