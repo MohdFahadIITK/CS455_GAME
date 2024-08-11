@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './Components/LandingPage.jsx'
 import EndingPageLoss from './Components/EndingPageLoss.jsx'
+import EndingPageWin from './Components/EndingPageWin.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
         element : <LandingPage/>
       },
       {
-        path : "/CS455_GAME/L",
+        path : "/CS455_GAME/GameLost",
         element : <EndingPageLoss/>
+      },
+      {
+        path : "/CS455_GAME/GameWon",
+        element : <EndingPageWin/>
       },
     ]
   }
