@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlayButton() {
+export default function TryAgainButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
