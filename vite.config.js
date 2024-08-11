@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // Set the base URL for GitHub Pages
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Use the correct base URL for GitHub Pages
+  base: '/CS455_GAME/', // Use the correct base URL for GitHub Pages
 })
