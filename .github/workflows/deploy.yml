@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
@@ -27,7 +27,7 @@ jobs:
     - name: Configure Git
       run: |
         git config --global user.email "fahadm20@iitk.ac.in"
-        git config --global user.name "Mohd_Fahad"
+        git config --global user.name "MohdFahadIITK"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
