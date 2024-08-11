@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './Components/LandingPage.jsx'
 import EndingPageLoss from './Components/EndingPageLoss.jsx'
 import EndingPageWin from './Components/EndingPageWin.jsx'
+import Play from './Components/Play.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path : "/CS455_GAME/GameWon",
         element : <EndingPageWin/>
+      },
+      {
+        path : "/CS455_GAME/play",
+        element : <Play/>
       },
     ]
   }
