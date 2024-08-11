@@ -1,0 +1,31 @@
+name: Deploy Vite Project
+
+on:
+  push:
+    branches:
+      - main  # Change this to the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Specify the Node.js version you need
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build  # This is the command to build your Vite project
+
+    - name: Deploy to production
+      run: npm run deploy  # Replace with your deployment command or script
+
+    - name: Confirm deployment
+      run: echo "Deployment completed successfully."
