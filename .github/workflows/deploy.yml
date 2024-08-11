@@ -26,7 +26,7 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.email "mohdfahad.knp2019@gmail.com"
+        git config --global user.email "fahadm20@iitk.ac.in"
         git config --global user.name "Mohd_Fahad"
 
     - name: Deploy to GitHub Pages
