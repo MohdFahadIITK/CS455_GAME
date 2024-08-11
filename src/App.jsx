@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<LandingPage />} />
+        <Route path='/CS455_GAME/' element={<LandingPage />} />
       </Routes>
     </Router>
   );
