@@ -9,7 +9,7 @@ export default function PlayButton() {
   };
 
   return<button onClick={handleClick} className='flex h-fit w-fit text-3xl bg-red-500 px-4 py-4 rounded-md'>
-        Enter Arena
+    Enter Arena
   </button>
 }
 
