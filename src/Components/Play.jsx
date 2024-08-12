@@ -5,7 +5,7 @@ import InputButtons from "./InputButtons";
 
 export default function Play(){
 
-    const [score,setScore] = useState(4);
+    const [score,setScore] = useState(0);
     const [balls,setBalls] = useState(0);
     
     return <div className="flex h-screen">
