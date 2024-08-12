@@ -7,21 +7,21 @@ import myGifFour from '../assets/Four.gif';
 import myGifSix from '../assets/Six.gif';
 import myGifOut from '../assets/Out.gif';
 
-export default function GifComponent({ score }) {
+export default function GifComponent({ currentScore }) {
   let gifSrc;
 
   // Determine the GIF source based on the score
-  if (score === 0) {
+  if (currentScore === 0) {
     gifSrc = myGifZero;
-  } else if (score === 1) {
+  } else if (currentScore === 1) {
     gifSrc = myGifOne;
-  } else if (score === 2) {
+  } else if (currentScore === 2) {
     gifSrc = myGifTwo;
-  } else if (score === 3) {
+  } else if (currentScore === 3) {
     gifSrc = myGifThree;
-  } else if (score === 4) {
+  } else if (currentScore === 4) {
     gifSrc = myGifFour;
-  } else if (score === 6) {
+  } else if (currentScore === 6) {
     gifSrc = myGifSix;
   } else {
     gifSrc = myGifOut; // Default GIF for other scores
@@ -33,7 +33,7 @@ export default function GifComponent({ score }) {
         {/* Render the selected GIF */}
         <img 
           src={gifSrc} 
-          alt={`Gif for score ${score}`} 
+          alt={`Gif for score ${currentScore}`} 
           className="max-w-full max-h-full object-contain"
         />
       </div>
