@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ScoreDisplay from "./ScoreDisplay";
+import GifComponent from "./GifComponent";
 
 export default function Play(){
 
@@ -8,6 +9,7 @@ export default function Play(){
     
     return <div className="flex h-screen">
         <div className="flex flex-col h-full w-1/2">
+            <GifComponent score={score}/>
             <ScoreDisplay score={score} balls={balls}></ScoreDisplay>
         </div>
         <div className="flex flex-col h-full w-1/2"></div>
