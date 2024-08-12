@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function InputButtons({ setCurrentScore, setBalls, setScore }) {
+export default function InputButtons({ setCurrentScore, setBalls, setScore, setBotResponse }) {
 
   const navigate = useNavigate();
 
@@ -13,6 +13,7 @@ export default function InputButtons({ setCurrentScore, setBalls, setScore }) {
     console.log("Inputs recieved");
     setBalls(prevBalls => prevBalls + 1);
     const randomGeneratedValue = randomNumberGenerator();
+    setBotResponse(randomGeneratedValue);
     if (value === randomGeneratedValue) {
       setCurrentScore(-1);     
       setTimeout(() => {
