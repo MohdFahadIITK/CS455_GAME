@@ -6,11 +6,11 @@ export default function EndingPageWin() {
   return (
     <div
       style={{
-        backgroundImage: `url(${myImage})`, // Use `url()` to apply the image
-        backgroundSize: 'cover',  // Ensures the image covers the entire div
-        backgroundPosition: 'center',  // Centers the image
-        backgroundRepeat: 'no-repeat', // Prevents the image from repeating
-        height: '100vh',  // Full viewport height
+        backgroundImage: `url(${myImage})`,
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat',
+        height: '100vh', 
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

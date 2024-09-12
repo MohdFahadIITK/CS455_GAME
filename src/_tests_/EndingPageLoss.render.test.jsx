@@ -11,7 +11,7 @@ describe('EndingPageLoss Component', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByTestId('end-page-content')).toBeInTheDocument();
+    expect(screen.getByTestId('end-page-content-loss')).toBeInTheDocument();
     expect(screen.getByTestId('try-again-button')).toBeInTheDocument();
   });
 
