@@ -1,4 +1,3 @@
-import React from 'react';
 import TryAgainButton from './TryAgainButton';
 import EndPageContentLoss from './EndPageContentLoss';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';

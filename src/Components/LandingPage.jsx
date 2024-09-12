@@ -1,7 +1,7 @@
-import React from 'react';
 import PlayButton from './PlayButton';
 import WelcomeUser from './WelcomeUser';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';
+import Rules from './Rules';
 
 export default function LandingPage() {
   return (
@@ -19,6 +19,7 @@ export default function LandingPage() {
     >
       <WelcomeUser />
       <PlayButton />
+      <Rules/> 
     </div>
   );
 }
