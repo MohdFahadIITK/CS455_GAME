@@ -1,8 +1,8 @@
-import { useState } from "react";
-import ScoreDisplay from "./ScoreDisplay";
-import GifComponent from "./GifComponent";
-import InputButtons from "./InputButtons";
-import CurrentScoreAndBotResponse from "./CurrentScoreAndBotResponse";
+import { useState } from 'react';
+import ScoreDisplay from './ScoreDisplay';
+import GifComponent from './GifComponent';
+import InputButtons from './InputButtons';
+import CurrentScoreAndBotResponse from './CurrentScoreAndBotResponse';
 
 export default function Play(){
 
@@ -20,5 +20,5 @@ export default function Play(){
             <InputButtons setCurrentScore={setCurrentScore} setBalls={setBalls} setScore={setScore} setBotResponse = {setBotResponse}/>
             <CurrentScoreAndBotResponse currentScore={currentScore} botResponse={botResponse} />
         </div>
-    </div>
+    </div>;
 }
