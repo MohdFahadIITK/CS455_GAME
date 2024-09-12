@@ -1,35 +1,38 @@
+import js from '@eslint/js'
+import globals from 'globals'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+
 export default [
   {
-    files: ['**/*.{js,ts,jsx,tsx}'],
+    files: ['**/*.{js,jsx}'],
+    ignores: ['dist'],
     languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        // Global variables for browser and Node.js environments
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        process: 'readonly',
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
       },
-      parser: (await import('@typescript-eslint/parser')).default, // TypeScript parser
     },
+    settings: { react: { version: '18.3' } },
     plugins: {
-      '@typescript-eslint': (await import('@typescript-eslint/eslint-plugin')).default,
-      react: (await import('eslint-plugin-react')).default,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': ['warn'],
-      'react/prop-types': 'off',
-      'no-console': 'warn',
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single'],
-    },
-    settings: {
-      react: {
-        version: 'detect', // Automatically detect React version
-      },
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/jsx-no-target-blank': 'off',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
     },
   },
-];
+]
