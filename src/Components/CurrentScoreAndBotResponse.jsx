@@ -1,5 +1,6 @@
-import React from 'react';
 /* eslint-disable react/prop-types */
+import React from 'react';
+
 export default function CurrentScoreAndBotResponse({ currentScore, botResponse }) {
     return (
         <div className="flex justify-center items-center px-10 py-10 h-1/2 w-full">
