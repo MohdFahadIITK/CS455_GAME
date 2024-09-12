@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+/* eslint-disable react/prop-types */
 export default function ScoreDisplay({score, balls}) {
     const overs =  Math.floor(balls/6);
     const remainingBValls = balls % 6;
