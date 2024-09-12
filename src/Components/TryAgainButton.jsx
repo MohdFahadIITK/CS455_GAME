@@ -9,6 +9,14 @@ export default function TryAgainButton() {
     navigate('/CS455_GAME/play');
   };
 
+  return (
+    <button 
+      data-testid="try-again-button" 
+      onClick={handleClick} 
+      className='flex h-fit w-fit text-3xl bg-red-500 px-4 py-4 rounded-md'>
+      Enter Arena Again
+    </button>
+  );
 
 }
 
