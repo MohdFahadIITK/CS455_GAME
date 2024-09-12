@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 export function randomNumberGenerator() {
-  return Math.floor(Math.random() * 7);
+  const ans =  Math.floor(Math.random() * 6);
+  if(ans<=4) return ans;
+  else return ans + 1;
 }
 
 export default function InputButtons({ setCurrentScore, setBalls, setScore, setBotResponse }) {
