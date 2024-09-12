@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from 'react-router-dom';
 
+
+export function randomNumberGenerator() {
+  return Math.floor(Math.random() * 7);
+}
+
 export default function InputButtons({ setCurrentScore, setBalls, setScore, setBotResponse }) {
 
   const navigate = useNavigate();
-
-  function randomNumberGenerator() {
-    return Math.floor(Math.random() * 7);
-  }
 
   function calculateScore(value) {
     console.log("Inputs recieved");
