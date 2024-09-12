@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+ 
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,7 +13,6 @@ export default function InputButtons({ setCurrentScore, setBalls, setScore, setB
   const navigate = useNavigate();
 
   function calculateScore(value) {
-    console.log("Inputs recieved");
     setBalls(prevBalls => prevBalls + 1);
     const randomGeneratedValue = randomNumberGenerator();
     setBotResponse(randomGeneratedValue);
@@ -24,7 +23,7 @@ export default function InputButtons({ setCurrentScore, setBalls, setScore, setB
       }, 1000);
     } else {
       setCurrentScore(value);
-      setScore(score => score + value)
+      setScore(score => score + value);
     }
   }
 

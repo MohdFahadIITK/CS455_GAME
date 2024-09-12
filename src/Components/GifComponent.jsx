@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+ 
 import myGifZero from '../assets/Zero.gif';
 import myGifOne from '../assets/One.gif';
 import myGifTwo from '../assets/Two.gif';
