@@ -7,9 +7,6 @@ export default function TryAgainButton() {
     navigate('/CS455_GAME/play');
   };
 
-  return<button onClick={handleClick} className='flex h-fit w-fit text-3xl bg-transparent px-4 py-4 border-2 border-white rounded-md text-white'>
-    Enter Arena Again
-  </button>;
 
 }
 
