@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'reaact';
+import React from 'react';
 import { useState } from "react";
 
 export default function ScoreDisplay({score, balls}) {

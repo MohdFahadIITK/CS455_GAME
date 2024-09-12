@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 export default function WelcomeUser(){
     return <div className="flex justify-center px-4 my-20 text-4xl text-red-700 font-semibold" >

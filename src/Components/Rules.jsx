@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 export default function Rules(){
     return <div className="flex flex-auto justify-center mx-10 px-4 py-4 my-40 bg-red-700 text-2xl text-black font-semibold border-2 border-white rounded-xl" >
         How to Play:<br/>
