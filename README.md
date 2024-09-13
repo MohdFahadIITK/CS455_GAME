@@ -16,6 +16,9 @@
 # Deployed Link
 [mohdfahadiitk.github.io/CS455_GAME/](https://mohdfahadiitk.github.io/CS455_GAME/)
 
+#Quality Check
+[Sonar Cloud](https://sonarcloud.io/project/overview?id=MohdFahadIITK_CS455_GAME)
+
 # Cricket Game
 
 This project is a Book Style Cricket game built with Reactjs as part of the CS455 coursework.
