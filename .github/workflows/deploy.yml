@@ -31,19 +31,17 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Run Jest tests
-        run: npm test
+      - name: Run Jest tests with coverage
+        run: npm test -- --coverage
 
       - name: Build project
         run: npm run build
 
-      - name: Install SonarCloud Scanner
-        run: npm install --save-dev sonar-scanner
-
-      - name: SonarCloud Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: npx sonar-scanner -Dsonar.projectKey=MohdFahadIITK_CS455_GAME -Dsonar.organization=mohdfahadiitk -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      - name: Upload Jest coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: ./coverage
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
