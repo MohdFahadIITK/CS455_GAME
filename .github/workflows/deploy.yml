@@ -31,6 +31,11 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: SonarCloud Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: npx sonar-scanner
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
