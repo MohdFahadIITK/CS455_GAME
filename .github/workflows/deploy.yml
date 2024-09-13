@@ -43,7 +43,7 @@ jobs:
       - name: SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: npx sonar-scanner -Dsonar.projectKey=your_project_key -Dsonar.organization=your_organization_key -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: npx sonar-scanner -Dsonar.projectKey=MohdFahadIITK_CS455_GAME -Dsonar.organization=mohdfahadiitk -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
