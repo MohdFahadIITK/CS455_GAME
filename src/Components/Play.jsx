@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from "react";
 import ScoreDisplay from "./ScoreDisplay";
 import GifComponent from "./GifComponent";
-import InputButtons from "./InputButtons";
+import {InputButtons} from "./InputButtons";
 import CurrentScoreAndBotResponse from "./CurrentScoreAndBotResponse";
 
 export default function Play(){

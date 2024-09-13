@@ -9,7 +9,7 @@ export function randomNumberGenerator() {
   else return ans + 1;
 }
 
-export default function InputButtons({ setCurrentScore, setBalls, setScore, setBotResponse }) {
+export const InputButtons = ({ setCurrentScore, setBalls, setScore, setBotResponse }) => {
 
   const navigate = useNavigate();
 
