@@ -16,7 +16,7 @@
 # Deployed Link
 [mohdfahadiitk.github.io/CS455_GAME/](https://mohdfahadiitk.github.io/CS455_GAME/)
 
-#Quality Check
+# Quality Check
 [Sonar Cloud](https://sonarcloud.io/project/overview?id=MohdFahadIITK_CS455_GAME)
 
 # Cricket Game
