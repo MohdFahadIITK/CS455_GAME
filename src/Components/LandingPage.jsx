@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <div
       style={{
-        backgroundImage: `url(${myImage})`, // Use `url()` to apply the image
+        backgroundImage: `url(${myImage})`, 
         backgroundSize: 'cover',  // Ensures the image covers the entire div
         backgroundPosition: 'center',  // Centers the image
         backgroundRepeat: 'no-repeat', // Prevents the image from repeating
