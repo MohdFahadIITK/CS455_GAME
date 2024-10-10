@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './Components/LandingPage.jsx'
 import EndingPage from './Components/EndingPage.jsx'
 import Play from './Components/Play.jsx'
+import LeaderBoard from './Components/LeaderBoard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path : "/CS455_GAME/play",
         element : <Play/>
+      },
+      {
+        path : "/CS455_GAME/LeaderBoard",
+        element : <LeaderBoard/>
       },
     ]
   }
