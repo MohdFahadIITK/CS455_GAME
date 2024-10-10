@@ -20,7 +20,7 @@ export const InputButtons = ({ setCurrentScore, setBalls, setScore, setBotRespon
     setBotResponse(randomGeneratedValue);
     if (value === randomGeneratedValue) {  
       setTimeout(() => {
-        navigate('/CS455_GAME/GameWon');
+        navigate('/CS455_GAME/GameOver');
       }, 1000);
     } else {
       setCurrentScore(value);
