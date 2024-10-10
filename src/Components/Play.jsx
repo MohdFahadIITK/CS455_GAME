@@ -9,9 +9,9 @@ import CurrentScoreAndBotResponse from "./CurrentScoreAndBotResponse";
 export default function Play(){
 
     const [score,setScore] = useState(null);
-    const [currentScore,setCurrentScore] = useState(0);
-    const [balls,setBalls] = useState(0);
-    const [botResponse,setBotResponse] = useState(0);
+    const [currentScore,setCurrentScore] = useState(null);
+    const [balls,setBalls] = useState(null);
+    const [botResponse,setBotResponse] = useState(null);
     
     return <div className="flex h-screen">
         <div className="flex flex-col h-full w-1/2">

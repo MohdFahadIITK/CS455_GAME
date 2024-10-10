@@ -7,12 +7,16 @@ import myGifThree from '../assets/Three.gif';
 import myGifFour from '../assets/Four.gif';
 import myGifSix from '../assets/Six.gif';
 import myGifOut from '../assets/Out.gif';
+import myGifStart from '../assets/start.gif'
 
 export default function GifComponent({ currentScore }) {
   let gifSrc;
 
   // Determine the GIF source based on the score
-  if (currentScore === 0) {
+  if (currentScore === null) {
+    gifSrc = myGifStart;
+  }
+  else if (currentScore === 0) {
     gifSrc = myGifZero;
   } else if (currentScore === 1) {
     gifSrc = myGifOne;
