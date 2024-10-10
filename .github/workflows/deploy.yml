@@ -27,33 +27,32 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        with:
+          working-directory: frontend
 
-      - name: Run ESLint 
-        run: |
-          cd frontend 
-          npm run lint
+      - name: Run ESLint
+        run: npm run lint
+        working-directory: frontend
 
       - name: Run Jest tests with coverage
-        run: |
-          cd frontend 
-          npm test -- --coverage
+        run: npm test -- --coverage
+        working-directory: frontend
 
       - name: Build project
-        run: |
-          cd frontend 
-          npm run build
+        run: npm run build
+        working-directory: frontend
 
       - name: Upload Jest coverage report
         uses: actions/upload-artifact@v3
         with:
           name: coverage-report
-          path: ./coverage
+          path: frontend/coverage
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: frontend/dist
 
   deploy:
     name: Deploy
