@@ -4,7 +4,7 @@ import TryAgainButton from './TryAgainButton';
 import EndPageContent from './EndPageContent';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';
 
-export default function EndingPageWin() {
+export default function EndingPage() {
   return (
     <div
       style={{
