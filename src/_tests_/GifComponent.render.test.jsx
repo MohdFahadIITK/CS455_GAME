@@ -10,9 +10,16 @@ import myGifThree from '../assets/Three.gif';
 import myGifFour from '../assets/Four.gif';
 import myGifSix from '../assets/Six.gif';
 import myGifOut from '../assets/Out.gif';
+import myGifStart from '../assets/start.gif';
 
 describe('GifComponent', () => {
   const renderComponent = (score) => render(<GifComponent currentScore={score} />);
+
+  test('renders start GIF when currentScore is null', () => {
+    renderComponent(null);
+    const img = screen.getByAltText('Gif for score null');
+    expect(img).toHaveAttribute('src', myGifStart);
+  });
 
   test('renders default GIF for score other than 0, 1, 2, 3, 4, or 6', () => {
     renderComponent(5);
