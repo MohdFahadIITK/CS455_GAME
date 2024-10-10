@@ -3,6 +3,7 @@ import React from 'react';
 import TryAgainButton from './TryAgainButton';
 import EndPageContent from './EndPageContent';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';
+import LeaderBoardButton from './LeaderBoardButton';
 
 export default function EndingPage() {
   return (
@@ -18,8 +19,14 @@ export default function EndingPage() {
         alignItems: 'center',
       }}
     >
+
       <EndPageContent />
-      <TryAgainButton />
+      <div className="flex flex-col items-center pt-4">
+        <TryAgainButton />
+      </div>
+      <div className="flex flex-col items-center pt-4">
+        <LeaderBoardButton/>
+      </div>
     </div>
   );
 }

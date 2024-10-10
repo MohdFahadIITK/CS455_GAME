@@ -4,6 +4,7 @@ import PlayButton from './PlayButton';
 import WelcomeUser from './WelcomeUser';
 import myImage from '../assets/pexels-jurie-maree-3665535-5519470.jpg';
 import Rules from './Rules';
+import LeaderBoardButton from './LeaderBoardButton';
 
 export default function LandingPage() {
   return (
@@ -20,7 +21,14 @@ export default function LandingPage() {
       }}
     >
       <WelcomeUser />
-      <PlayButton />
+      <div>
+        <div className="flex flex-col items-center pt-4">
+          <PlayButton />
+        </div>
+        <div className="flex flex-col items-center pt-4">
+          <LeaderBoardButton/>
+        </div>
+      </div>
       <Rules/> 
     </div>
   );
