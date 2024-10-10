@@ -10,9 +10,7 @@ export function randomNumberGenerator() {
 }
 
 export const InputButtons = ({ setCurrentScore, setBalls, setScore, setBotResponse }) => {
-
   const navigate = useNavigate();
-
   function calculateScore(value) {
     console.log("Inputs recieved");
     setBalls(prevBalls => prevBalls + 1);
