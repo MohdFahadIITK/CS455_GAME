@@ -11,7 +11,7 @@ export default function SignInSignUp() {
 
   const handleButtonSignin = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/signin', {
+      const response = await fetch('https://stormy-gorge-37627-4a036e4b8415.herokuapp.com/api/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export default function SignInSignUp() {
 
   const handleButtonSignup = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/signup', {
+      const response = await fetch('https://stormy-gorge-37627-4a036e4b8415.herokuapp.com/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

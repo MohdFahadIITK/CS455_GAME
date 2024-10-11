@@ -17,7 +17,7 @@ export const InputButtons = ({ score, setCurrentScore, setBalls, setScore, setBo
     
     if (value === randomGeneratedValue) {
       try {
-        const response = await fetch('http://localhost:3000/api/save-current-score', {
+        const response = await fetch('https://stormy-gorge-37627-4a036e4b8415.herokuapp.com/api/save-current-score', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

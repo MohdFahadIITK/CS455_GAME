@@ -9,7 +9,7 @@ export default function LeaderBoard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/get-top-scores');
+        const response = await fetch('https://stormy-gorge-37627-4a036e4b8415.herokuapp.com/api/get-top-scores');
         const json = await response.json();
         console.log(json.data);
         setData(json.data);

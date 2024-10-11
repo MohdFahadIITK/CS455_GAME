@@ -13,7 +13,7 @@ export default function EndingPageScoreDisplay(){
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://localhost:3000/api/get-current-score', {
+            const response = await fetch('https://stormy-gorge-37627-4a036e4b8415.herokuapp.com/api/get-current-score', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
