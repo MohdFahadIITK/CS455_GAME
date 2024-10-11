@@ -8,10 +8,10 @@ dist/
 logs/
 *.log
 
-# Environment files
-.env
-.env.local
-.env.*.local
+# # Environment files
+# .env
+# .env.local
+# .env.*.local
 
 # IDE and editor folders
 .vscode/
