@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node src/server.ts"
+    "start": "tsc && node dist/server.js",
+    "build": "tsc"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
