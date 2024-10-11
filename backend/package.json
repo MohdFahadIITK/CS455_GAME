@@ -1,6 +1,9 @@
 {
+  "name": "cs455-game",
+  "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node src/server.ts"
+    "start": "node dist/server.js",
+    "postinstall": "tsc"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",

@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import routes from '../src/routes';
+import routes from './routes';
 import dotenv from 'dotenv';
+import {config} from './config/config'
 
 dotenv.config();
 
@@ -25,6 +26,10 @@ app.use(express.json());
 
 app.use('/api', routes);
 
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+app.get('/', async (req: express.Request, res: express.Response)=>{
+    res.status(200).json({message : "Hello"});
+})
+
+app.listen(config.server.port, () => {
+    console.log(`Server listening on port ${config.server.port}`);
 });
