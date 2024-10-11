@@ -38,7 +38,7 @@ This project is a Book Style Cricket game built with Reactjs as part of the CS45
 
 
 # Test coverage
-![Some random photo](./test-coverage.png)
+![Some random photo](./Documents/test-coverage.png)
 
 
 ## Node Packages Used
