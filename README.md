@@ -11,7 +11,7 @@ This project is a Book Style Cricket game built with Reactjs as part of the CS45
 * Mobile-friendly and responsive design
 
 ## Screenshots
-![image]()
+![image](../CS455_GAME/Documents/gameplay1.png)
 
 
 # How to Play:
