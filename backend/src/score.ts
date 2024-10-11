@@ -4,8 +4,6 @@ import {saveScore, getCurrentScore, getTopScores} from './Repository/scoreReposi
 
 export const saveSessionScore = async (req: express.Request, res: express.Response) => {
 
-    console.log(req.body);
-
     const { user_auth_token, score, name } = req.body;
 
     if (!user_auth_token || !name) {
@@ -28,14 +26,13 @@ export const saveSessionScore = async (req: express.Request, res: express.Respon
 
 export const getSessionScore = async (req: express.Request, res: express.Response) => {
     const { user_auth_token } = req.body;
-
     if (!user_auth_token) {
         return res.status(400).json({ error: 'Missing auth token' });
     }
 
     try {
-        const score = await getCurrentScore(user_auth_token); // Now returning the score directly
-
+        const score = await getCurrentScore(user_auth_token);
+        
         return res.status(200).json({ "score" : score });
     } catch (err) {
         console.log(err);

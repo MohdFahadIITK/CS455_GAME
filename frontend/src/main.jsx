@@ -7,6 +7,7 @@ import LandingPage from './Components/LandingPage.jsx'
 import EndingPage from './Components/EndingPage.jsx'
 import Play from './Components/Play.jsx'
 import LeaderBoard from './Components/LeaderBoard.jsx'
+import { AuthProvider } from './contexts/AuthContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </StrictMode>,
 )
