@@ -13,7 +13,7 @@ router.post('/signin', async (req: express.Request, res: express.Response) => {
      await signin(req, res);
 });
 
-router.get('/get-current-score', async (req: express.Request, res: express.Response)=>{
+router.post('/get-current-score', async (req: express.Request, res: express.Response)=>{
     await getSessionScore(req,res);
 })
 

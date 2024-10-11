@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function SignInSignUp() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [token, setToken] = useState('');
   const navigate = useNavigate();
+  const { signIn } = useAuth();
 
   const handleButtonSignin = async () => {
     try {
@@ -15,14 +16,12 @@ export default function SignInSignUp() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ "email": email, "password": password }),
+        body: JSON.stringify({ "email" : email, "password" : password }),
       });
 
       const data = await response.json();
       if (response.ok) {
-        setToken(data.token);
-        console.log("Sign in successful", data);
-        setToken(data.token);
+        signIn(data.token, name);
         navigate('/CS455_GAME/Play');
       } else {
         alert(data.error || 'Failed to sign in, please try again.');
@@ -39,14 +38,12 @@ export default function SignInSignUp() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ "username": name, "email": email, "password": password }),
+        body: JSON.stringify({ "username" : name, "email": email , "password" : password }),
       });
 
       const data = await response.json();
       if (response.ok) {
-        console.log("Sign up successful", data);
-        setToken(data.token);
-        console.log(token);
+        signIn(data.token, name);
         navigate('/CS455_GAME/Play');
       } else {
         alert(data.error || 'Failed to sign up, please try again.');

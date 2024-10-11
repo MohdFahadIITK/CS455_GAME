@@ -2,27 +2,38 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 export function randomNumberGenerator() {
-  const ans =  Math.floor(Math.random() * 6);
-  if(ans<=4) return ans;
-  else return ans + 1;
+  const ans = Math.floor(Math.random() * 6);
+  return ans <= 4 ? ans : ans + 1;
 }
 
-export const InputButtons = ({ setCurrentScore, setBalls, setScore, setBotResponse }) => {
+export const InputButtons = ({ score, setCurrentScore, setBalls, setScore, setBotResponse, token, userName }) => {
   const navigate = useNavigate();
-  function calculateScore(value) {
-    console.log("Inputs recieved");
+
+  async function calculateScore(value) {
     setBalls(prevBalls => prevBalls + 1);
     const randomGeneratedValue = randomNumberGenerator();
     setBotResponse(randomGeneratedValue);
-    if (value === randomGeneratedValue) {  
+    
+    if (value === randomGeneratedValue) {
+      try {
+        const response = await fetch('http://localhost:3000/api/save-current-score', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ "user_auth_token": token, "score": score, "name" : userName }),
+        });
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
       setTimeout(() => {
         navigate('/CS455_GAME/GameOver');
       }, 1000);
     } else {
       setCurrentScore(value);
-      setScore(score => score + value)
+      setScore(score => score + value);
     }
   }
 
@@ -61,4 +72,4 @@ export const InputButtons = ({ setCurrentScore, setBalls, setScore, setBotRespon
       </div>
     </div>
   );
-}
+};

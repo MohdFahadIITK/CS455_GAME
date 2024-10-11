@@ -6,7 +6,7 @@ export const saveScore = async (user_auth_token: string, score: number, name: st
     const client = await pool.connect();
     try {
         const result = await client.query(
-            'INSERT INTO live_session_score (user_auth_token, score) VALUES ($1, $2, $3) RETURNING id',
+            'INSERT INTO live_session_score (user_auth_token, score, name) VALUES ($1, $2, $3) RETURNING id',
             [user_auth_token, score, name]
         );
         console.log('Query executed successfully:', result);
@@ -24,7 +24,7 @@ export const getCurrentScore = async (user_auth_token: string) => {
     try {
         // Execute the select query
         const result = await client.query(
-            'SELECT score FROM live_session_score WHERE user_auth_token = $1',
+            'SELECT score FROM live_session_score WHERE user_auth_token = $1 order by score desc limit 1',
             [user_auth_token]
         );
 
